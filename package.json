@@ -9,9 +9,13 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@slideskit/code": "^1.0.0",
+    "@slideskit/core": "^0.3.0",
+    "@slideskit/video": "^1.0.0",
     "next": "16.1.6",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "slideskit": "^0.1.1"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
