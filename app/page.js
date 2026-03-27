@@ -1,3 +1,5 @@
+"use client";
+
 import { presentationLinks } from "@/presentations";
 
 import NavPills from "./_components/NavPills";
@@ -5,6 +7,15 @@ import PresentationCard from "./_components/PresentationCard";
 import ScheduleList from "./_components/ScheduleList";
 import SectionCard from "./_components/SectionCard";
 import { INSTRUCTORS, STACK_ITEMS, TOOLS } from "./_data/pageData";
+import { Presentation } from "slideskit";
+import { codeBlockRegistry } from "@slideskit/code";
+import { videoBlockRegistry } from "@slideskit/video";
+import "@slideskit/core/styles.css";
+import "@slideskit/code/styles.css";
+import "@slideskit/video/styles.css";
+import kickoffPresentation from "@/presentations/kickoff";
+
+const blockRegistry = { ...codeBlockRegistry, ...videoBlockRegistry };
 
 export default function Home() {
   return (
@@ -20,6 +31,11 @@ export default function Home() {
           <p className="mt-2 text-slate-600 dark:text-slate-400">Webbshop V-MEN · Nackademin 2026</p>
         </div>
       </header>
+
+      {/* ── Hero presentation - Kickoff ── */}
+      <div className="max-w-[1400px] mx-auto py-10 px-6">
+        <Presentation presentation={kickoffPresentation} blockRegistry={blockRegistry} />
+      </div>
 
       <NavPills />
 
