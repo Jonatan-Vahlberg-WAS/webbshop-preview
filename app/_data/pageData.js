@@ -58,6 +58,8 @@ export const SCHEDULE = [
     date: "2026-04-24",
     description: "Slutpresentation av webbshopen för klassen och projektledaren.",
     classroom: "Sal C201",
+    linkHref: "/gruppredovisning",
+    linkLabel: "Vad som ingår i gruppredovisningen",
   },
 ];
 

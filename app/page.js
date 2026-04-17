@@ -253,6 +253,18 @@ MONGODB_URI=mongodb://localhost:27017/webshop`}
         {/* ── Gruppuppgifter ── */}
         <SectionCard id="group-assignments" title="Gruppuppgifter">
           <div className="space-y-8 text-slate-700 dark:text-slate-300 leading-relaxed">
+            <div className="rounded-lg border border-teal-200 dark:border-teal-800 bg-teal-50/70 dark:bg-teal-950/30 px-4 py-3">
+              <p className="text-slate-800 dark:text-slate-200 font-medium mb-1">Gruppredovisning</p>
+              <p className="text-sm text-slate-600 dark:text-slate-400 mb-2">
+                Här finns en genomgång av vad ni kan ta med när ni visar webbshopen — på ett sätt som är lätt att förstå.
+              </p>
+              <a
+                href="/gruppredovisning"
+                className="inline-flex text-sm font-medium text-teal-600 dark:text-teal-400 hover:underline"
+              >
+                Öppna instruktionerna för gruppredovisningen →
+              </a>
+            </div>
             <p>Uppdelning av arbete och ansvarsområden mellan backend- och frontend-grupperna.</p>
             <div className="grid gap-6 sm:grid-cols-2">
               <div className="rounded-lg border border-slate-200 dark:border-slate-700 p-5">

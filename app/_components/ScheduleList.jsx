@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { SCHEDULE } from "@/app/_data/pageData";
 
 function formatDate(dateStr) {
@@ -17,7 +18,7 @@ export default function ScheduleList() {
 
   return (
     <ol className="relative border-l-2 border-teal-200 dark:border-teal-800 space-y-0">
-      {SCHEDULE.map(({ title, date, description, classroom }) => {
+      {SCHEDULE.map(({ title, date, description, classroom, linkHref, linkLabel }) => {
         const eventDate = new Date(date);
         const isPast = eventDate < today;
 
@@ -70,6 +71,20 @@ export default function ScheduleList() {
                       : "text-slate-600 dark:text-slate-400"
                   }`}>
                     {description}
+                  </p>
+                ) : null}
+                {linkHref && linkLabel ? (
+                  <p className="mt-2">
+                    <Link
+                      href={linkHref}
+                      className={`text-sm font-medium underline underline-offset-2 ${
+                        isPast
+                          ? "text-slate-500 dark:text-slate-500"
+                          : "text-teal-600 dark:text-teal-400"
+                      }`}
+                    >
+                      {linkLabel} →
+                    </Link>
                   </p>
                 ) : null}
               </div>
